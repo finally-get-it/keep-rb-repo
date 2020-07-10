@@ -6,14 +6,23 @@ read -p "Enter Your Infura Id : " infura
 read -p "Enter Your Etherium Wallet Address : " eth
 read -p "Enter Your Etherium Wallet Passwd : " passwd
 
-echo 'export SERVER_IP='$server'' >> ~/.bashrc
-source ~/.bashrc
-echo 'export INFURA_PROJECT_ID='$infura'' >> ~/.bashrc
-source ~/.bashrc
-echo 'export ETH_WALLET='$eth'' >> ~/.bashrc
-source ~/.bashrc
-echo 'export KEEP_CLIENT_ETHEREUM_PASSWORD='$passwd'' >> ~/.bashrc
-source ~/.bashrc
+#echo 'export SERVER_IP='$server'' >> ~/.bashrc
+#source ~/.bashrc
+#echo 'export INFURA_PROJECT_ID='$infura'' >> ~/.bashrc
+#source ~/.bashrc
+#echo 'export ETH_WALLET='$eth'' >> ~/.bashrc
+#source ~/.bashrc
+#echo 'export KEEP_CLIENT_ETHEREUM_PASSWORD='$passwd'' >> ~/.bashrc
+#source ~/.bashrc
+
+echo 'export SERVER_IP='$server'' >> ~/.bash_profile
+source ~/.bash_profile
+echo 'export INFURA_PROJECT_ID='$infura'' >> ~/.bash_profile
+source ~/.bash_profile
+echo 'export ETH_WALLET='$eth'' >> ~/.bash_profile
+source ~/.bash_profile
+echo 'export KEEP_CLIENT_ETHEREUM_PASSWORD='$passwd'' >> ~/.bash_profile
+source ~/.bash_profile
 
 #Setup the firewall rules
 sudo ufw allow 22/tcp
