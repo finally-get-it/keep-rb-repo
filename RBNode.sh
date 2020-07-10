@@ -6,14 +6,12 @@ read -p "Enter Your Infura Id : " infura
 read -p "Enter Your Etherium Wallet Address : " eth
 read -p "Enter Your Etherium Wallet Passwd : " passwd
 
-# Get your server's IP
-export SERVER_IP=$server
-# Change with your ID from Infura.
-export INFURA_PROJECT_ID=$infura
-# Change with your ETH Wallet.
-export ETH_WALLET=$eth
-# Change with your ETH Wallet passwd.
-export KEEP_CLIENT_ETHEREUM_PASSWORD=$passwd
+vi ~/.bashrc
+echo 'export SERVER_IP='echo $server'' >> ~/.bashrc
+echo 'export INFURA_PROJECT_ID='echo $infura'' >> ~/.bashrc
+echo 'export ETH_WALLET='echo $eth'' >> ~/.bashrc
+echo 'export KEEP_CLIENT_ETHEREUM_PASSWORD='echo $passwd'' >> ~/.bashrc
+source ~/.bashrc
 
 #Setup the firewall rules
 sudo ufw allow 22/tcp
@@ -43,11 +41,11 @@ mkdir -p $HOME/keep-client/persistence
 #Writing  $HOME/keep-client/config/config.toml file
 echo '# Ethereum host connection info.' >> $HOME/keep-client/config/config.toml
 echo '[ethereum]' >> $HOME/keep-client/config/config.toml
-echo ' URL = "wss://ropsten.infura.io/ws/v3/$INFURA_PROJECT_ID"' >> $HOME/keep-client/config/config.toml
-echo ' URLRPC = "https://ropsten.infura.io/v3/$INFURA_PROJECT_ID"' >> $HOME/keep-client/config/config.toml
+echo ' URL = "wss://ropsten.infura.io/ws/v3/'$INFURA_PROJECT_ID'"' >> $HOME/keep-client/config/config.toml
+echo ' URLRPC = "https://ropsten.infura.io/v3/'$INFURA_PROJECT_ID'"' >> $HOME/keep-client/config/config.toml
 echo '# Keep operator Ethereum account.' >> $HOME/keep-client/config/config.toml
 echo '[ethereum.account]' >> $HOME/keep-client/config/config.toml
-echo ' Address = "$ETH_WALLET"' >> $HOME/keep-client/config/config.toml
+echo ' Address = "'$ETH_WALLET'"' >> $HOME/keep-client/config/config.toml
 echo ' KeyFile = "/mnt/keystore/keep_wallet.json"' >> $HOME/keep-client/config/config.toml
 echo '# Keep contract addresses configuration.' >> $HOME/keep-client/config/config.toml
 echo '[ethereum.ContractAddresses]' >> $HOME/keep-client/config/config.toml
@@ -61,7 +59,7 @@ echo ' Peers = ["/dns4/bootstrap-1.core.keep.test.boar.network/tcp/3001/ipfs/16U
 "/dns4/bootstrap-2.test.keep.network/tcp/3919/ipfs/16Uiu2HAmNNuCp45z5bgB8KiTHv1vHTNAVbBgxxtTFGAndageo9Dp"]' >> $HOME/keep-client/config/config.toml
 echo ' Port = 3919' >> $HOME/keep-client/config/config.toml
 echo ' # Override the node’s default addresses announced in the network' >> $HOME/keep-client/config/config.toml
-echo ' AnnouncedAddresses = ["/ip4/$SERVER_IP/tcp/3919"]' >> $HOME/keep-client/config/config.toml
+echo ' AnnouncedAddresses = ["/ip4/'$SERVER_IP'/tcp/3919"]' >> $HOME/keep-client/config/config.toml
 echo '# Storage is encrypted' >> $HOME/keep-client/config/config.toml
 echo '[Storage]' >> $HOME/keep-client/config/config.toml
 echo ' DataDir = "/mnt/persistence"' >> $HOME/keep-client/config/config.toml
