@@ -6,7 +6,6 @@ read -p "Enter Your Infura Id : " infura
 read -p "Enter Your Etherium Wallet Address : " eth
 read -p "Enter Your Etherium Wallet Passwd : " passwd
 
-vi ~/.bashrc
 echo 'export SERVER_IP='echo $server'' >> ~/.bashrc
 echo 'export INFURA_PROJECT_ID='echo $infura'' >> ~/.bashrc
 echo 'export ETH_WALLET='echo $eth'' >> ~/.bashrc
