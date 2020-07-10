@@ -6,15 +6,6 @@ read -p "Enter Your Infura Id : " infura
 read -p "Enter Your Etherium Wallet Address : " eth
 read -p "Enter Your Etherium Wallet Passwd : " passwd
 
-#echo 'export SERVER_IP='$server'' >> ~/.bashrc
-#source ~/.bashrc
-#echo 'export INFURA_PROJECT_ID='$infura'' >> ~/.bashrc
-#source ~/.bashrc
-#echo 'export ETH_WALLET='$eth'' >> ~/.bashrc
-#source ~/.bashrc
-#echo 'export KEEP_CLIENT_ETHEREUM_PASSWORD='$passwd'' >> ~/.bashrc
-#source ~/.bashrc
-
 echo 'export SERVER_IP='$server'' >> ~/.bash_profile
 source ~/.bash_profile
 echo 'export INFURA_PROJECT_ID='$infura'' >> ~/.bash_profile
@@ -22,6 +13,8 @@ source ~/.bash_profile
 echo 'export ETH_WALLET='$eth'' >> ~/.bash_profile
 source ~/.bash_profile
 echo 'export KEEP_CLIENT_ETHEREUM_PASSWORD='$passwd'' >> ~/.bash_profile
+source ~/.bash_profile
+
 source ~/.bash_profile
 
 #Setup the firewall rules
@@ -49,6 +42,8 @@ mkdir -p $HOME/keep-client/config
 mkdir -p $HOME/keep-client/keystore
 mkdir -p $HOME/keep-client/persistence
 
+source ~/.bash_profile
+
 #Writing  $HOME/keep-client/config/config.toml file
 echo '# Ethereum host connection info.' >> $HOME/keep-client/config/config.toml
 echo '[ethereum]' >> $HOME/keep-client/config/config.toml
@@ -74,3 +69,5 @@ echo ' AnnouncedAddresses = ["/ip4/'$SERVER_IP'/tcp/3919"]' >> $HOME/keep-client
 echo '# Storage is encrypted' >> $HOME/keep-client/config/config.toml
 echo '[Storage]' >> $HOME/keep-client/config/config.toml
 echo ' DataDir = "/mnt/persistence"' >> $HOME/keep-client/config/config.toml
+
+source ~/.bash_profile
