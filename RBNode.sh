@@ -1,5 +1,8 @@
 #Requesting the Input values
-echo "As mentioned in Read.me I hope you have the values of YOUR SERVER IP, INFURA ID, ETH ADDRESS, ETH ADDRESS PASSWD handy"
+echo "As mentioned in Read.me I hope you have the values of YOUR SERVER IP, INFURA PROJECT ID, ETH ADDRESS, ETH WALLET PASSWORD handy"
+echo "================================================================================================================================"
+echo "Start entering values one by one as system keeps ask"
+echo "================================================================================================================================"
 
 read -p "Enter Your Server IP : " server
 read -p "Enter Your Infura Id : " infura
