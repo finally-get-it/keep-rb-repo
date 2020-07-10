@@ -55,4 +55,4 @@ echo ' # Override the node’s default addresses announced in the network' >> $H
 echo ' AnnouncedAddresses = ["/ip4/$server/tcp/3919"]' >> $HOME/keep-client/config/config.toml
 echo '# Storage is encrypted' >> $HOME/keep-client/config/config.toml
 echo '[Storage]' >> $HOME/keep-client/config/config.toml
-echo " DataDir = "/mnt/persistence"' >> $HOME/keep-client/config/config.toml
+echo ' DataDir = "/mnt/persistence"' >> $HOME/keep-client/config/config.toml
