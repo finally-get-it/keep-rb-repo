@@ -1,6 +1,6 @@
 This script is based on this one:
 https://github.com/cryptoenthu1/keep-rb-repo
-I found, that I dont want to edit any other files, so few moments later I get this two files. 
+I found, that I dont want to edit any other files, so few moments later I get this one. 
 Main changes:
 1. Now we can choose name of our project, this name will be used for docker container and folder in /root/~
 2. We can change port, if somehow we cannot use the default port or we want to use multiple instances on one server. 
