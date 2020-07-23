@@ -11,11 +11,17 @@ I assume, you have opened desired port on your network and running all command's
 
 Installation:
 1. The main thing -- you need to download script and make it executable. 
- git clone https://github.com/finally-get-it/keep-rb-repo.git
- cd keep-rb-repo/
- chmod +x rbnodev2.sh
+
+git clone https://github.com/finally-get-it/keep-rb-repo.git
+
+cd keep-rb-repo/
+
+chmod +x rbnodev2.sh
+
 2. Run it. 
+
 ./rbnodev2.sh
+
 3. During install you'll be prompted for name of your node, Infura ID, your wallet address, wallet pass, content of keyfile, port for the node (default 3319) and if you want to start docker container by now, if no, you'll get script in the /root/~. 
 
 After that, you can check node logs by:
