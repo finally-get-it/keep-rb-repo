@@ -19,10 +19,16 @@ Installation:
 3. During install you'll be prompted for name of your node, Infura ID, your wallet address, wallet pass, content of keyfile, port for the node (default 3319) and if you want to start docker container by now, if no, you'll get script in the /root/~. 
 
 After that, you can check node logs by:
+
 docker logs 'node-name' -f 
+
 Sometimes, you should type server ip manually, 
 Open rbnodev2.sh by your text editor and change 
+
 server_addr=curl ifconfig.co
+
 by 
+
 server_addr="your-public-ip" 
+
 Works fine on Ubuntu 18 LTS.
